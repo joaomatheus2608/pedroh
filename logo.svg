@@ -1,0 +1,12 @@
+<svg width="42" height="46" viewBox="0 0 42 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Vertical stem of P -->
+  <line x1="2.5" y1="2" x2="2.5" y2="35" stroke="#1c1c1e" stroke-width="2.6" stroke-linecap="square"/>
+  <!-- Bowl of P -->
+  <path d="M2.5 3.3 H20 C26 3.3 29 6 29 11.5 C29 17 26 19.7 20 19.7 H2.5" stroke="#1c1c1e" stroke-width="2.6" stroke-linecap="square" fill="none"/>
+  <!-- Left stem of H -->
+  <line x1="12" y1="11.5" x2="12" y2="44" stroke="#1c1c1e" stroke-width="2.6" stroke-linecap="square"/>
+  <!-- Right stem of H -->
+  <line x1="39.5" y1="11.5" x2="39.5" y2="44" stroke="#1c1c1e" stroke-width="2.6" stroke-linecap="square"/>
+  <!-- Crossbar of H -->
+  <line x1="12" y1="28" x2="39.5" y2="28" stroke="#1c1c1e" stroke-width="2.6"/>
+</svg>

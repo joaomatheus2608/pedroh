@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedro Henrique | Cirurgião Dentista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Barra de Progresso Superior Discreta -->
+  <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="hero">
+
+    <!-- Top Floating Pill Navigation -->
+    <header class="navbar-wrapper">
+      <nav class="navbar" id="main-nav">
+        <a href="#hero" class="nav-logo" aria-label="Logo Pedro Henrique">
+          <svg class="logo-icon" viewBox="0 0 42 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Haste vertical do P -->
+            <line x1="2.5" y1="2" x2="2.5" y2="35" stroke="#1c1c1e" stroke-width="2.8" stroke-linecap="square" />
+            <!-- Curvatura do P -->
+            <path d="M2.5 3.3 H20 C26 3.3 29 6 29 11.5 C29 17 26 19.7 20 19.7 H2.5" stroke="#1c1c1e" stroke-width="2.8"
+              stroke-linecap="square" fill="none" />
+            <!-- Perna esquerda do H -->
+            <line x1="12" y1="11.5" x2="12" y2="44" stroke="#1c1c1e" stroke-width="2.8" stroke-linecap="square" />
+            <!-- Perna direita do H -->
+            <line x1="39.5" y1="11.5" x2="39.5" y2="44" stroke="#1c1c1e" stroke-width="2.8" stroke-linecap="square" />
+            <!-- Barra horizontal do H -->
+            <line x1="12" y1="28" x2="39.5" y2="28" stroke="#1c1c1e" stroke-width="2.8" />
+          </svg>
+        </a>
+
+        <div class="nav-brand">
+          <span class="brand-bold">PEDROH</span><span class="brand-light">DOCTOR</span>
+        </div>
+
+        <div class="nav-action">
+          <a href="#contrate" class="btn-hire">Entrar em contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Hero Stage -->
+    <main class="hero-stage">
+
+      <!-- Big Typography Behind Subject -->
+      <div class="hero-backdrop-text" aria-hidden="true">
+        <div class="backdrop-row row-pedro">PEDRO</div>
+        <div class="backdrop-row row-henrique">HENRIQUE</div>
+      </div>
+
+      <!-- Center Person Image -->
+      <div class="hero-subject-container">
+        <img src="pedro-hero.png" alt="Dr. Pedro Henrique" class="hero-subject-img" />
+        <div class="floor-vignette"></div>
+      </div>
+
+      <!-- Hero Bottom Content Overlay -->
+      <div class="hero-bottom-bar">
+        <div class="hero-quote">
+          <p>
+            No final, o que mais<br>
+            importa não é apenas<br>
+            o que vemos no<br>
+            espelho... é a<br>
+            liberdade de sorrir.
+          </p>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#agendar" class="btn-schedule">AGENDAR CONSULTA</a>
+        </div>
+      </div>
+
+    </main>
+
+  </section>
+
+  <!-- SEÇÃO 2: QUEM SOU EU -->
+  <section class="about-section" id="sobre">
+    <div class="about-container">
+
+      <!-- Coluna da Esquerda: Card com a Foto -->
+      <div class="about-image-card" data-reveal="fade-right">
+        <img src="pedro-sobre.png" alt="Dr. Pedro Henrique no elevador" class="about-img" />
+      </div>
+
+      <!-- Coluna da Direita: Conteúdo de Texto -->
+      <div class="about-content" data-reveal="fade-up">
+        <h2 class="about-title">QUEM SOU EU?</h2>
+
+        <p class="about-text">
+          Sou dentista e acredito que a odontologia vai muito além de cuidar de sorrisos. Meu trabalho é unir
+          conhecimento, técnica e sensibilidade para oferecer um atendimento personalizado, valorizando a saúde, a
+          estética e a individualidade de cada paciente.
+        </p>
+
+        <p class="about-text">
+          Busco proporcionar uma experiência acolhedora, baseada na confiança, na transparência e na excelência,
+          respeitando a história e as necessidades de cada pessoa. Para mim, cada sorriso é único e merece um cuidado
+          que valorize sua beleza natural e seu bem-estar.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3: SERVIÇOS -->
+  <section class="services-section" id="servicos">
+
+    <!-- Cabeçalho da Seção -->
+    <div class="services-header" data-reveal="fade-up">
+      <span class="services-subtitle-top">Conheça nossos</span>
+      <h2 class="services-main-title">serviços</h2>
+      <p class="services-description">
+        Aqui nós utilizamos softwares digitais e técnicas especializadas para lhe
+        mostrar o resultados prévios de alguns procedimentos.
+      </p>
+    </div>
+
+    <!-- Grade de Serviços -->
+    <div class="services-grid">
+
+      <!-- Linha 1 — 4 cards -->
+      <a href="#" class="service-card service-card--featured" data-reveal="card">
+        <span class="service-icon" aria-hidden="true">🦷</span>
+        <h3 class="service-name">Próteses</h3>
+        <span class="service-link">Saiba como funciona &rarr;</span>
+      </a>
+      <a href="#" class="service-card" data-reveal="card">
+        <span class="service-icon" aria-hidden="true">🦷</span>
+        <h3 class="service-name">Clareamento</h3>
+        <span class="service-link">Saiba como funciona &rarr;</span>
+      </a>
+      <a href="#" class="service-card" data-reveal="card">
+        <span class="service-icon" aria-hidden="true">🦷</span>
+        <h3 class="service-name">Implantes</h3>
+        <span class="service-link">Saiba como funciona &rarr;</span>
+      </a>
+      <a href="#" class="service-card" data-reveal="card">
+        <span class="service-icon" aria-hidden="true">🦷</span>
+        <h3 class="service-name">Cirurgias</h3>
+        <span class="service-link">Saiba como funciona &rarr;</span>
+      </a>
+
+      <!-- Linha 2 — 4 cards -->
+      <a href="#" class="service-card" data-reveal="card">
+        <span class="service-icon" aria-hidden="true">🦷</span>
+        <h3 class="service-name">Ortodontia</h3>
+        <span class="service-link">Saiba como funciona &rarr;</span>
+      </a>
+      <a href="#" class="service-card" data-reveal="card">
+        <span class="service-icon" aria-hidden="true">🦷</span>
+        <h3 class="service-name">Lentes de Contato</h3>
+        <span class="service-link">Saiba como funciona &rarr;</span>
+      </a>
+      <a href="#" class="service-card" data-reveal="card">
+        <span class="service-icon" aria-hidden="true">🦷</span>
+        <h3 class="service-name">Endodontia</h3>
+        <span class="service-link">Saiba como funciona &rarr;</span>
+      </a>
+      <a href="#" class="service-card" data-reveal="card">
+        <span class="service-icon" aria-hidden="true">🦷</span>
+        <h3 class="service-name">Periodontia</h3>
+        <span class="service-link">Saiba como funciona &rarr;</span>
+      </a>
+
+      <!-- Linha 3 — 3 cards centralizados via flex wrapper (span full grid) -->
+      <div class="services-row-3">
+        <a href="#" class="service-card" data-reveal="card">
+          <span class="service-icon" aria-hidden="true">🦷</span>
+          <h3 class="service-name">Harmonização</h3>
+          <span class="service-link">Saiba como funciona &rarr;</span>
+        </a>
+        <a href="#" class="service-card" data-reveal="card">
+          <span class="service-icon" aria-hidden="true">🦷</span>
+          <h3 class="service-name">Odontopediatria</h3>
+          <span class="service-link">Saiba como funciona &rarr;</span>
+        </a>
+        <a href="#" class="service-card" data-reveal="card">
+          <span class="service-icon" aria-hidden="true">🦷</span>
+          <h3 class="service-name">Dentística</h3>
+          <span class="service-link">Saiba como funciona &rarr;</span>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SEÇÃO 4: POR QUE ESCOLHER O PEDROH? -->
+  <section class="why-section" id="por-que">
+
+    <div class="why-container">
+
+      <!-- Coluna Esquerda: Título + 3 itens numerados -->
+      <div class="why-content">
+        <div class="why-header" data-reveal="fade-up">
+          <span class="why-subtitle-top">Por que escolher o</span>
+          <h2 class="why-main-title">PEDROH?</h2>
+        </div>
+
+        <ol class="why-list">
+
+          <li class="why-item" data-reveal="stagger-item">
+            <div class="why-number-badge">1.</div>
+            <div class="why-item-text">
+              <h3 class="why-item-title">O Seu Sorriso Merece o Melhor</h3>
+              <p class="why-item-desc">Aqui você encontra um atendimento de qualidade, um ambiente acolhedor e,
+                principalmente, resultados que tragam segurança e confiança para o seu sorriso.</p>
+            </div>
+          </li>
+
+          <li class="why-item" data-reveal="stagger-item">
+            <div class="why-number-badge">2.</div>
+            <div class="why-item-text">
+              <h3 class="why-item-title">Tecnologia, Precisão e Atendimento Personalizado</h3>
+              <p class="why-item-desc">Na Innovare, unimos tecnologia e um atendimento acolhedor para oferecer a melhor
+                experiência ao paciente.</p>
+            </div>
+          </li>
+
+          <li class="why-item" data-reveal="stagger-item">
+            <div class="why-number-badge">3.</div>
+            <div class="why-item-text">
+              <h3 class="why-item-title">A Transformação Que Você Merece</h3>
+              <p class="why-item-desc">Aqui você encontra um atendimento de qualidade, um ambiente acolhedor e,
+                principalmente, resultados que tragam segurança e confiança para o seu sorriso.</p>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+
+      <!-- Coluna Direita: Vídeo com Autoplay inteligente ao scroll e som ativado -->
+      <div class="why-photo-wrapper why-video-wrapper" data-reveal="fade-left">
+        <video id="why-section-video" class="why-video" src="pedro-video.mp4" poster="pedro-escolher2.png" playsinline
+          loop preload="auto"></video>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SEÇÃO 5: ESPAÇO -->
+  <section class="space-section" id="espaco">
+
+    <!-- Cabeçalho centralizado -->
+    <div class="space-header" data-reveal="fade-up">
+      <span class="space-subtitle-top">Conheça nosso</span>
+      <h2 class="space-main-title">Espaço</h2>
+      <p class="space-description">
+        Aqui, você é atendido da melhor forma, com conforto, cuidado e<br>
+        praticidade em cada detalhe.
+      </p>
+    </div>
+
+    <!-- Grade de Fotos Assimétrica -->
+    <div class="space-gallery">
+
+      <!-- Coluna Esquerda: 2 fotos empilhadas -->
+      <div class="space-col space-col--left">
+        <div class="space-photo space-photo--top" data-reveal="zoom-in">
+          <div class="space-photo-inner space-photo--gray"></div>
+        </div>
+        <div class="space-photo space-photo--bottom" data-reveal="zoom-in">
+          <div class="space-photo-inner space-photo--dark"></div>
+        </div>
+      </div>
+
+      <!-- Coluna Direita: 1 foto alta -->
+      <div class="space-col space-col--right">
+        <div class="space-photo space-photo--tall" data-reveal="fade-left">
+          <div class="space-photo-inner space-photo--light"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SEÇÃO 6: DÚVIDAS FREQUENTES (FAQ) -->
+  <section class="faq-section" id="faq">
+
+    <!-- Foto do Dr. Pedro ancorada diretamente na parede esquerda e base -->
+    <div class="faq-photo-wrapper" data-reveal="fade-right">
+      <img src="Design sem nome (6).png" alt="Dr. Pedro Henrique" class="faq-photo" />
+    </div>
+
+    <div class="faq-container">
+
+      <!-- Coluna Esquerda: Título -->
+      <div class="faq-left">
+        <div class="faq-title-block" data-reveal="fade-up">
+          <span class="faq-title-light">Dúvidas</span>
+          <h2 class="faq-title-bold">Frequentes</h2>
+        </div>
+      </div>
+
+      <!-- Coluna Direita: Perguntas Accordion -->
+      <div class="faq-right">
+        <ul class="faq-list">
+
+          <li class="faq-item" data-reveal="faq-pill">
+            <button class="faq-question" aria-expanded="false">
+              <span>Com que frequência devo ir ao dentista?</span>
+              <span class="faq-arrow">↘</span>
+            </button>
+            <div class="faq-answer">
+              <p>O ideal é visitar o dentista a cada 6 meses para consultas de rotina e limpeza profissional. Porém,
+                dependendo da sua saúde bucal, seu dentista pode indicar intervalos diferentes.</p>
+            </div>
+          </li>
+
+          <li class="faq-item" data-reveal="faq-pill">
+            <button class="faq-question" aria-expanded="false">
+              <span>O clareamento dental faz mal aos dentes?</span>
+              <span class="faq-arrow">↘</span>
+            </button>
+            <div class="faq-answer">
+              <p>Quando realizado com acompanhamento profissional, o clareamento é seguro. Pode causar sensibilidade
+                temporária, que desaparece após o tratamento.</p>
+            </div>
+          </li>
+
+          <li class="faq-item" data-reveal="faq-pill">
+            <button class="faq-question" aria-expanded="false">
+              <span>Qual a diferença entre implante e prótese?</span>
+              <span class="faq-arrow">↘</span>
+            </button>
+            <div class="faq-answer">
+              <p>O implante é uma raiz artificial fixada no osso, sobre a qual é colocada uma coroa. A prótese pode ser
+                fixa ou removível e apoia-se nos dentes ou no osso. O dentista indica a melhor opção para cada caso.</p>
+            </div>
+          </li>
+
+          <li class="faq-item" data-reveal="faq-pill">
+            <button class="faq-question" aria-expanded="false">
+              <span>O que são lentes de contato dentais?</span>
+              <span class="faq-arrow">↘</span>
+            </button>
+            <div class="faq-answer">
+              <p>São finas lâminas de porcelana ou resina coladas na frente dos dentes, corrigindo cor, forma e tamanho.
+                É um procedimento minimamente invasivo e com resultados estéticos excelentes.</p>
+            </div>
+          </li>
+
+          <li class="faq-item" data-reveal="faq-pill">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quanto tempo dura um tratamento ortodôntico?</span>
+              <span class="faq-arrow">↘</span>
+            </button>
+            <div class="faq-answer">
+              <p>Depende da complexidade do caso, mas em geral varia de 12 a 36 meses. O aparelho transparente
+                (alinhadores) pode ser mais rápido em casos simples.</p>
+            </div>
+          </li>
+
+        </ul>
+
+        <!-- Slogan + CTA abaixo das perguntas -->
+        <div class="faq-cta-block" data-reveal="fade-up">
+          <div class="faq-cta-lead">
+            <p class="faq-cta-slogan">
+              <span class="faq-cta-slogan-light">Tem mais dúvidas?</span>
+              <span class="faq-cta-slogan-bold">Agende uma consulta!</span>
+            </p>
+            <div class="faq-cta-arrow-bridge" aria-hidden="true">
+              <svg class="faq-cta-arrow-svg" viewBox="0 0 46 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 10H40" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+                <path d="M32 3L40 10L32 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <a href="#agendar" class="btn-faq-cta" id="btn-pronto-sorrir">
+            <span>Pronto para sorrir?</span>
+            <span class="btn-faq-icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Lenis Smooth Inertia Scroll (Local) -->
+  <script src="lenis.min.js"></script>
+
+  <!-- Script Principal: Inércia Leve + Revelação em Scroll + Interações -->
+  <script>
+    // Ativa classe para revelação progressiva com CSS
+    document.documentElement.classList.add('js-ready');
+
+    // Inicialização do Lenis (Inércia Leve e Elegante)
+    let lenisInstance = null;
+    if (typeof Lenis !== 'undefined') {
+      lenisInstance = new Lenis({
+        duration: 1.15,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 0.95,
+        touchMultiplier: 1.4,
+        infinite: false,
+      });
+
+      function raf(time) {
+        lenisInstance.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    } else {
+      document.documentElement.style.scrollBehavior = 'smooth';
+    }
+
+    // Scroll suave em âncoras usando Lenis
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const hash = this.getAttribute('href');
+        if (hash && hash !== '#') {
+          const target = document.querySelector(hash);
+          if (target) {
+            e.preventDefault();
+            if (lenisInstance) {
+              lenisInstance.scrollTo(target, { offset: 0, duration: 1.15 });
+            } else {
+              target.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        }
+      });
+    });
+
+    // Barra de progresso de scroll no topo
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      if (!progressBar) return;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+      progressBar.style.width = progress + '%';
+    }, { passive: true });
+
+    // Configura índices de stagger dinamicamente para cada grupo
+    document.querySelectorAll('.services-grid .service-card').forEach((card, index) => {
+      card.style.setProperty('--stagger-index', index);
+    });
+    document.querySelectorAll('.why-list .why-item').forEach((item, index) => {
+      item.style.setProperty('--stagger-index', index);
+    });
+    document.querySelectorAll('.faq-list .faq-item').forEach((item, index) => {
+      item.style.setProperty('--stagger-index', index);
+    });
+
+    // IntersectionObserver para revelação suave ao rolar a página
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // Accordion do FAQ
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          i.classList.remove('faq-item--open');
+        });
+        if (!isOpen) {
+          btn.setAttribute('aria-expanded', 'true');
+          item.classList.add('faq-item--open');
+        }
+      });
+    });
+
+    // Controle Inteligente do Vídeo da Seção 4 (Som sempre ativado, Autoplay ao entrar, Pausa ao sair, Continua de onde parou)
+    const whyVideo = document.getElementById('why-section-video');
+
+    if (whyVideo) {
+      // Som sempre ativado
+      whyVideo.muted = false;
+
+      // Desbloqueio imediato do áudio para compatibilidade total com navegadores modernos
+      const unlockAudio = () => {
+        whyVideo.muted = false;
+        ['click', 'touchstart', 'scroll', 'keydown'].forEach(evt => {
+          window.removeEventListener(evt, unlockAudio);
+        });
+      };
+      ['click', 'touchstart', 'scroll', 'keydown'].forEach(evt => {
+        window.addEventListener(evt, unlockAudio, { passive: true, once: true });
+      });
+
+      // IntersectionObserver para detectar quando o usuário chega na 4ª seção
+      const videoSectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Entrou na seção 4: inicia ou continua de onde parou com som
+            whyVideo.muted = false;
+            const playPromise = whyVideo.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(() => {
+                // Se o navegador exigir mute temporário até o primeiro gesto/scroll do usuário:
+                whyVideo.muted = true;
+                whyVideo.play().catch(() => { });
+                const resumeSound = () => {
+                  whyVideo.muted = false;
+                  window.removeEventListener('click', resumeSound);
+                  window.removeEventListener('scroll', resumeSound);
+                  window.removeEventListener('touchstart', resumeSound);
+                };
+                window.addEventListener('click', resumeSound, { once: true });
+                window.addEventListener('scroll', resumeSound, { once: true, passive: true });
+                window.addEventListener('touchstart', resumeSound, { once: true, passive: true });
+              });
+            }
+          } else {
+            // Saiu da seção 4: pausa exatamente no ponto atual
+            whyVideo.pause();
+          }
+        });
+      }, {
+        // Threshold baixo garante funcionamento mesmo em telas pequenas onde a seção é muito alta
+        threshold: 0.05
+      });
+
+      // Observa o video diretamente (mais confiável em mobile) e também a seção
+      videoSectionObserver.observe(whyVideo);
+      const sectionWhy = document.getElementById('por-que');
+      if (sectionWhy) {
+        videoSectionObserver.observe(sectionWhy);
+      }
+    }
+  </script>
+
+</body>
+
+</html>
