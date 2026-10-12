@@ -227,7 +227,7 @@
       <!-- Coluna Direita: Vídeo com Autoplay inteligente ao scroll e som ativado -->
       <div class="why-photo-wrapper why-video-wrapper" data-reveal="fade-left">
         <video id="why-section-video" class="why-video" src="pedro-video.mp4" poster="pedro-escolher2.png" playsinline
-          loop preload="auto"></video>
+          webkit-playsinline loop preload="auto"></video>
       </div>
 
     </div>
@@ -486,63 +486,99 @@
       });
     });
 
-    // Controle Inteligente do Vídeo da Seção 4 (Som sempre ativado, Autoplay ao entrar, Pausa ao sair, Continua de onde parou)
+    // Controle Inteligente do Vídeo da Seção 4 (Som sempre ativado, Autoplay sem travas, Prevenção de AbortError e Buffering Suave)
     const whyVideo = document.getElementById('why-section-video');
 
     if (whyVideo) {
-      // Som sempre ativado
-      whyVideo.muted = false;
+      let playPromise = null;
+      let shouldBePlaying = false;
+      let audioUnlocked = false;
 
-      // Desbloqueio imediato do áudio para compatibilidade total com navegadores modernos
+      // Desbloqueio de áudio em qualquer primeira interação do usuário (scroll, touch, clique)
       const unlockAudio = () => {
-        whyVideo.muted = false;
-        ['click', 'touchstart', 'scroll', 'keydown'].forEach(evt => {
+        if (!audioUnlocked) {
+          audioUnlocked = true;
+          whyVideo.muted = false;
+        }
+        ['pointerdown', 'touchstart', 'scroll', 'click', 'keydown'].forEach(evt => {
           window.removeEventListener(evt, unlockAudio);
         });
       };
-      ['click', 'touchstart', 'scroll', 'keydown'].forEach(evt => {
+      ['pointerdown', 'touchstart', 'scroll', 'click', 'keydown'].forEach(evt => {
         window.addEventListener(evt, unlockAudio, { passive: true, once: true });
       });
 
-      // IntersectionObserver para detectar quando o usuário chega na 4ª seção
-      const videoSectionObserver = new IntersectionObserver((entries) => {
+      // Função segura de Play (evita concorrência e AbortError da API HTML5 Media)
+      function safePlay() {
+        shouldBePlaying = true;
+        if (whyVideo.paused) {
+          playPromise = whyVideo.play();
+          if (playPromise !== undefined) {
+            playPromise.then(() => {
+              playPromise = null;
+              if (!shouldBePlaying && !whyVideo.paused) {
+                whyVideo.pause();
+              }
+            }).catch(err => {
+              playPromise = null;
+              // Se o navegador bloqueou áudio em autoplay não interagido, inicia mudo e reativa no scroll
+              if (err.name === 'NotAllowedError') {
+                whyVideo.muted = true;
+                whyVideo.play().catch(() => {});
+              }
+            });
+          }
+        }
+      }
+
+      // Função segura de Pause (aguarda resolução de play pendente antes de pausar)
+      function safePause() {
+        shouldBePlaying = false;
+        if (playPromise !== null && playPromise !== undefined) {
+          playPromise.then(() => {
+            if (!shouldBePlaying && !whyVideo.paused) {
+              whyVideo.pause();
+            }
+          }).catch(() => {});
+        } else {
+          if (!whyVideo.paused) {
+            whyVideo.pause();
+          }
+        }
+      }
+
+      // Observer único focado na seção do vídeo para evitar disputa de eventos concorrentes
+      const sectionWhy = document.getElementById('por-que');
+      const targetToObserve = sectionWhy || whyVideo;
+
+      const videoObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Entrou na seção 4: inicia ou continua de onde parou com som
-            whyVideo.muted = false;
-            const playPromise = whyVideo.play();
-            if (playPromise !== undefined) {
-              playPromise.catch(() => {
-                // Se o navegador exigir mute temporário até o primeiro gesto/scroll do usuário:
-                whyVideo.muted = true;
-                whyVideo.play().catch(() => { });
-                const resumeSound = () => {
-                  whyVideo.muted = false;
-                  window.removeEventListener('click', resumeSound);
-                  window.removeEventListener('scroll', resumeSound);
-                  window.removeEventListener('touchstart', resumeSound);
-                };
-                window.addEventListener('click', resumeSound, { once: true });
-                window.addEventListener('scroll', resumeSound, { once: true, passive: true });
-                window.addEventListener('touchstart', resumeSound, { once: true, passive: true });
-              });
-            }
+            safePlay();
           } else {
-            // Saiu da seção 4: pausa exatamente no ponto atual
-            whyVideo.pause();
+            safePause();
           }
         });
       }, {
-        // Threshold baixo garante funcionamento mesmo em telas pequenas onde a seção é muito alta
-        threshold: 0.05
+        threshold: 0.15,
+        rootMargin: '60px 0px 60px 0px'
       });
 
-      // Observa o video diretamente (mais confiável em mobile) e também a seção
-      videoSectionObserver.observe(whyVideo);
-      const sectionWhy = document.getElementById('por-que');
-      if (sectionWhy) {
-        videoSectionObserver.observe(sectionWhy);
-      }
+      videoObserver.observe(targetToObserve);
+
+      // Recuperação automática contra travamentos de buffer / stall de rede
+      whyVideo.addEventListener('stalled', () => {
+        if (shouldBePlaying && whyVideo.paused) {
+          safePlay();
+        }
+      });
+
+      whyVideo.addEventListener('error', () => {
+        const curTime = whyVideo.currentTime;
+        whyVideo.load();
+        whyVideo.currentTime = curTime;
+        if (shouldBePlaying) safePlay();
+      });
     }
   </script>
 
