@@ -15,7 +15,7 @@ body {
   height: 100%;
   overflow-x: hidden;
   background-color: #656464;
-  color: #1c1c1e;
+  color: rgba(28, 28, 30, 0.8);
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -93,7 +93,7 @@ body {
   transform: translateX(-50%);
   font-size: clamp(0.92rem, 1.3vw, 1.18rem);
   letter-spacing: 0.14em;
-  color: #1a1a1c;
+  color: rgba(26, 26, 28, 0.8);
   user-select: none;
   white-space: nowrap;
 }
@@ -116,8 +116,8 @@ body {
 .btn-hire {
   display: inline-block;
   background-color: transparent;
-  color: #1c1c1e;
-  border: 1.8px solid #1c1c1e;
+  color: rgba(28, 28, 30, 0.8);
+  border: 1.8px solid rgba(28, 28, 30, 0.8);
   text-decoration: none;
   font-size: clamp(0.66rem, 0.82vw, 0.76rem);
   font-weight: 600;
@@ -130,9 +130,9 @@ body {
 }
 
 .btn-hire:hover {
-  background-color: #1c1c1e;
+  background-color: rgba(28, 28, 30, 0.8);
   color: #ffffff;
-  border-color: #1c1c1e;
+  border-color: rgba(28, 28, 30, 0.8);
   transform: translateY(-1px);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
 }
@@ -258,7 +258,7 @@ body {
   font-size: clamp(0.92rem, 1.2vw, 1.12rem);
   font-weight: 400;
   line-height: 1.48;
-  color: #27272a;
+  color: rgba(26, 26, 28, 0.8);
   letter-spacing: 0.02em;
 }
 
@@ -270,7 +270,7 @@ body {
 
 .btn-schedule {
   display: inline-block;
-  background-color: #27272a;
+  background-color: rgba(26, 26, 28, 0.8);
   color: #ffffff;
   border: 1.8px solid transparent;
   text-decoration: none;
@@ -286,7 +286,7 @@ body {
 }
 
 .btn-schedule:hover {
-  background-color: #18181a;
+  background-color: rgba(26, 26, 28, 0.95);
   color: #ffffff;
   border-color: transparent;
   transform: translateY(-2px);
@@ -606,7 +606,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   font-weight: 400;
-  color: rgba(46, 46, 48, 0.8);
+  color: rgba(26, 26, 28, 0.8);
   letter-spacing: 0.05em;
   margin-bottom: 2px;
 }
@@ -648,7 +648,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(30px, 4vw, 42px) clamp(24px, 3.2vw, 36px);
+  padding: clamp(34px, 4.4vw, 48px) clamp(26px, 3.4vw, 40px);
   background: rgba(235, 235, 237, 0.74);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -673,51 +673,24 @@ body {
   border-color: rgba(255, 255, 255, 0.85);
 }
 
-/* Topo do Card */
-.service-card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.service-badge {
-  display: inline-flex;
-  align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 6px 14px;
-  border-radius: 30px;
-  background: rgba(26, 26, 28, 0.07);
-  color: rgba(26, 26, 28, 0.85);
-  border: 1px solid rgba(26, 26, 28, 0.08);
-}
-
-.service-badge--accent {
-  background: #1a1a1c;
-  color: #ffffff;
-  border-color: #1a1a1c;
-}
-
+/* Ícone de Dente Flaticon */
 .service-icon-box {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.95);
-  color: #1a1a1c;
+  color: rgba(26, 26, 28, 0.8);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  margin-bottom: 22px;
 }
 
 .service-icon-box svg {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
 }
 
 /* Corpo do Card */
@@ -731,54 +704,24 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.4rem, 2vw, 1.75rem);
   font-weight: 700;
-  color: rgba(26, 26, 28, 0.92);
+  color: rgba(26, 26, 28, 0.8);
   letter-spacing: 0.01em;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .service-card-desc {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(0.9rem, 1.05vw, 0.98rem);
+  font-size: clamp(0.92rem, 1.08vw, 1rem);
   font-weight: 400;
-  line-height: 1.65;
-  color: rgba(45, 45, 48, 0.82);
-  margin-bottom: 24px;
-}
-
-/* Lista de Benefícios */
-.service-card-features {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 clamp(24px, 3.5vh, 32px) 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.service-card-features li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(0.84rem, 0.95vw, 0.9rem);
-  font-weight: 500;
-  color: rgba(30, 30, 33, 0.88);
-  line-height: 1.4;
-}
-
-.feature-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #1a1a1c;
-  flex-shrink: 0;
-  opacity: 0.65;
+  line-height: 1.68;
+  color: rgba(26, 26, 28, 0.8);
+  margin-bottom: 30px;
 }
 
 /* Rodapé do Card e Botão */
 .service-card-bottom {
   margin-top: auto;
-  padding-top: 10px;
+  padding-top: 6px;
 }
 
 .service-card-btn {
@@ -795,27 +738,26 @@ body {
   letter-spacing: 0.06em;
   text-decoration: none;
   background: transparent;
-  border: 1.5px solid rgba(26, 26, 28, 0.35);
-  color: #1a1a1c;
+  border: 1.5px solid rgba(26, 26, 28, 0.8);
+  color: rgba(26, 26, 28, 0.8);
   box-sizing: border-box;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .service-card-btn:hover {
-  background: #1a1a1c;
+  background: rgba(26, 26, 28, 0.8);
   color: #ffffff;
-  border-color: #1a1a1c;
+  border-color: rgba(26, 26, 28, 0.8);
 }
 
 .service-card-btn--solid {
-  background: #1a1a1c;
+  background: rgba(26, 26, 28, 0.8);
   color: #ffffff;
-  border-color: #1a1a1c;
+  border: 1.5px solid transparent;
 }
 
 .service-card-btn--solid:hover {
-  background: #333336;
-  border-color: #333336;
+  background: rgba(26, 26, 28, 0.95);
 }
 
 .service-btn-arrow {
@@ -869,22 +811,29 @@ body {
   }
 
   .service-card-clean {
-    padding: 26px 20px;
+    padding: 28px 22px;
     border-radius: 20px;
+  }
+
+  .service-icon-box {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 18px;
+  }
+
+  .service-icon-box svg {
+    width: 22px;
+    height: 22px;
   }
 
   .service-card-title {
     font-size: 1.35rem;
+    margin-bottom: 10px;
   }
 
   .service-card-desc {
     font-size: 0.88rem;
-    margin-bottom: 18px;
-  }
-
-  .service-card-features {
-    gap: 10px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
 
   .service-card-btn {
@@ -895,23 +844,19 @@ body {
 
 @media (max-width: 420px) {
   .service-card-clean {
-    padding: 22px 16px;
+    padding: 24px 18px;
     border-radius: 18px;
   }
 
-  .service-badge {
-    font-size: 0.68rem;
-    padding: 5px 11px;
-  }
-
   .service-icon-box {
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 16px;
   }
 
   .service-icon-box svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
   }
 
   .service-card-title {
@@ -921,11 +866,6 @@ body {
   .service-card-desc {
     font-size: 0.84rem;
     line-height: 1.55;
-  }
-
-  .service-card-features li {
-    font-size: 0.8rem;
-    gap: 8px;
   }
 }
 
