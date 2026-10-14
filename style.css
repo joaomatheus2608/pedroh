@@ -14,7 +14,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background-color: #f5f5f7;
+  background-color: #656464;
   color: rgba(28, 28, 30, 0.8);
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -32,11 +32,14 @@ body {
   display: flex;
   flex-direction: column;
   background:
-    radial-gradient(ellipse 75% 65% at 50% 30%, #ffffff 0%, transparent 75%),
-    radial-gradient(ellipse 120% 100% at 50% 100%, #cfcfd5 0%, transparent 60%),
-    radial-gradient(ellipse 60% 80% at 0% 50%, #d8d8de 0%, transparent 50%),
-    radial-gradient(ellipse 60% 80% at 100% 50%, #d8d8de 0%, transparent 50%),
-    #e2e2e7;
+    /* Spotlight grande centrado – simula flash de estúdio */
+    radial-gradient(ellipse 70% 60% at 52% 38%, #8c8a8a 0%, transparent 72%),
+    /* Vinheta lateral e inferior – paredes/chão do estúdio */
+    radial-gradient(ellipse 120% 100% at 50% 100%, #3a3939 0%, transparent 55%),
+    radial-gradient(ellipse 60% 80% at 0% 50%, #3c3b3b 0%, transparent 50%),
+    radial-gradient(ellipse 60% 80% at 100% 50%, #3c3b3b 0%, transparent 50%),
+    /* Base sólida escura */
+    #545353;
   overflow: hidden;
 }
 
@@ -58,15 +61,12 @@ body {
   width: min(89.5%, 920px);
   height: clamp(54px, 8.5vh, 66px);
   padding: 0 clamp(18px, 2.6vw, 30px);
-  background-color: rgba(255, 255, 255, 0.72);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  background-color: #828282;
   border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .nav-logo {
@@ -167,7 +167,7 @@ body {
 }
 
 .backdrop-row {
-  color: rgba(0, 0, 0, 0.045);
+  color: #272729;
   font-weight: 300;
   line-height: 0.88;
   text-transform: uppercase;
@@ -225,7 +225,7 @@ body {
   transform: translateX(-50%);
   width: min(92vw, 650px);
   height: 160px;
-  background: radial-gradient(ellipse at 50% 95%, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.04) 45%, transparent 75%);
+  background: radial-gradient(ellipse at 50% 95%, rgba(15, 15, 18, 0.55) 0%, rgba(15, 15, 18, 0.2) 40%, transparent 75%);
   pointer-events: none;
   z-index: -1;
 }
@@ -472,7 +472,7 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: clamp(60px, 10vh, 110px) 0;
-  background: #ececf0;
+  background: linear-gradient(180deg, #f5f5f7 0%, #ececef 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -495,14 +495,15 @@ body {
   max-width: 440px;
   border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-  background-color: #ffffff;
+  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  background-color: #e2e2e7;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .about-image-card:hover {
   transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 32px 75px rgba(0, 0, 0, 0.42);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.22);
 }
 
 .about-img {
@@ -523,8 +524,8 @@ body {
 .about-title {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(2rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: rgba(26, 26, 28, 0.8);
+  font-weight: 800;
+  color: #1d1d1f;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: clamp(22px, 3.4vh, 34px);
@@ -535,7 +536,7 @@ body {
   font-size: clamp(0.96rem, 1.15vw, 1.12rem);
   font-weight: 500;
   line-height: 1.68;
-  color: rgba(33, 33, 35, 0.8);
+  color: rgba(29, 29, 31, 0.76);
   letter-spacing: 0.015em;
   margin-bottom: clamp(20px, 2.8vh, 28px);
 }
@@ -584,167 +585,199 @@ body {
 }
 
 /* ==========================================================================
-   SEÇÃO 3: SERVIÇOS
+   SEÇÃO 3: PROVA SOCIAL (ANTES & DEPOIS)
    ========================================================================== */
-.services-section {
+.before-after-section {
   position: relative;
   width: 100%;
   padding: clamp(65px, 10vh, 105px) 0 clamp(75px, 11vh, 115px);
-  background: #f5f5f7;
+  background: linear-gradient(180deg, #ececef 0%, #e2e2e7 100%);
   overflow: hidden;
 }
 
 /* Cabeçalho centralizado */
-.services-header {
+.ba-header {
   text-align: center;
-  margin-bottom: clamp(40px, 6vh, 62px);
+  margin-bottom: clamp(36px, 5.5vh, 56px);
   padding: 0 20px;
 }
 
-.services-subtitle-top {
+.ba-subtitle-top {
   display: block;
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
-  font-weight: 400;
-  color: rgba(26, 26, 28, 0.8);
-  letter-spacing: 0.05em;
-  margin-bottom: 2px;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  font-weight: 600;
+  color: rgba(29, 29, 31, 0.55);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
 }
 
-.services-main-title {
+.ba-main-title {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(2.4rem, 4.5vw, 4rem);
   font-weight: 800;
-  color: rgba(26, 26, 28, 0.8);
-  letter-spacing: 0.01em;
-  line-height: 1;
-  margin-bottom: clamp(14px, 2.2vh, 22px);
+  color: #1d1d1f;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+  margin-bottom: clamp(14px, 2.2vh, 20px);
 }
 
-.services-description {
+.ba-description {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(0.9rem, 1.15vw, 1.06rem);
   font-weight: 400;
-  color: rgba(46, 46, 48, 0.8);
+  color: rgba(29, 29, 31, 0.72);
   line-height: 1.6;
   letter-spacing: 0.02em;
-  max-width: 620px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
-/* Grade de Serviços (Estilo Apple Cards) */
-.services-grid--apple {
+/* Container de Antes & Depois */
+.ba-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(24px, 3.5vw, 44px);
-  width: min(92%, 960px);
+  gap: clamp(24px, 3.5vw, 40px);
+  width: min(92%, 1060px);
   margin: 0 auto;
   align-items: stretch;
 }
 
-/* Card Apple Container */
-.apple-card {
+/* Card Antes e Depois - Estilo Apple */
+.ba-card {
   position: relative;
   background: #ffffff;
-  border-radius: 36px;
-  padding: 16px;
-  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.03);
+  border-radius: 32px;
+  padding: 16px 16px 18px;
+  box-shadow: 0 16px 44px -10px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.apple-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.13), 0 4px 14px rgba(0, 0, 0, 0.04);
+.ba-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 56px -12px rgba(0, 0, 0, 0.18), 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
-/* Palco Visual Interno (Área da Foto e Título) */
-.apple-card-visual {
-  background: #ececf0;
-  border-radius: 28px;
-  overflow: hidden;
+/* Cabeçalho do Card (Texto de Antes e Depois em cima das imagens no Desktop) */
+.ba-card-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding-top: clamp(22px, 3.2vw, 30px);
+  justify-content: space-between;
+  padding: 6px 10px 14px;
 }
 
-.apple-card-head {
-  padding: 0 16px clamp(14px, 2vh, 18px);
-}
-
-.apple-card-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1.4rem, 2.1vw, 1.75rem);
-  font-weight: 700;
-  color: rgba(26, 26, 28, 0.92);
-  letter-spacing: -0.01em;
-  margin-bottom: 6px;
-}
-
-.apple-card-status {
+.ba-tag {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 9999px;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.78rem;
-  font-weight: 500;
-  color: rgba(26, 26, 28, 0.65);
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-.apple-status-icon {
-  font-size: 0.72rem;
-  color: rgba(26, 26, 28, 0.6);
+.ba-tag--antes {
+  background: rgba(26, 26, 28, 0.08);
+  color: rgba(26, 26, 28, 0.85);
+  border: 1px solid rgba(26, 26, 28, 0.06);
 }
 
-.apple-card-img-wrap {
+.ba-tag--depois {
+  background: #1d1d1f;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ba-card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  font-weight: 700;
+  color: #1d1d1f;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* Palco Visual da Imagem */
+.ba-visual {
+  position: relative;
   width: 100%;
-  height: clamp(270px, 32vw, 350px);
+  height: clamp(340px, 36vw, 440px);
+  border-radius: 24px;
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  background-color: #1a1a1c;
 }
 
-.apple-card-img {
+.ba-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
   display: block;
-  border-radius: 0 0 28px 28px;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.apple-card:hover .apple-card-img {
+.ba-img--antes {
+  object-position: center 44%;
+}
+
+.ba-img--depois {
+  object-position: 40% 48%;
+}
+
+.ba-card:hover .ba-img {
   transform: scale(1.03);
 }
 
-/* Rodapé do Card (Perfil do Dr. + Botão estilo Apple) */
-.apple-card-footer {
+/* Pill flutuante estilo referência para mobile e destaque */
+.ba-pill {
+  display: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 8px 22px;
+  border-radius: 9999px;
+  background: rgba(18, 18, 20, 0.92);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Barra de Rodapé / Informações do Caso Clínico */
+.ba-case-footer {
+  width: min(92%, 1060px);
+  margin: 32px auto 0;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 16px 24px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 14px 10px 4px;
-  margin-top: 4px;
+  gap: 20px;
+  box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-.apple-card-profile {
+.ba-case-doctor-info {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
-.apple-avatar-wrap {
+.ba-case-avatar-wrap {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: #e2e2e7;
   display: flex;
@@ -753,136 +786,171 @@ body {
   flex-shrink: 0;
 }
 
-.apple-avatar-img {
-  width: 40px;
-  height: 40px;
+.ba-case-avatar {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   object-fit: cover;
   object-position: top;
   border: 1.5px solid #ffffff;
 }
 
-.apple-verified-dot {
+.ba-case-verified {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   background-color: #34c759;
   border: 2px solid #ffffff;
   border-radius: 50%;
 }
 
-.apple-profile-info {
+.ba-case-text {
   display: flex;
   flex-direction: column;
-  text-align: left;
 }
 
-.apple-profile-handle {
+.ba-case-handle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.86rem;
+  font-size: 0.92rem;
   font-weight: 700;
-  color: rgba(26, 26, 28, 0.88);
-  line-height: 1.2;
+  color: #1d1d1f;
+  line-height: 1.25;
 }
 
-.apple-profile-tag {
+.ba-case-proc {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 500;
-  color: rgba(26, 26, 28, 0.55);
-  line-height: 1.2;
+  color: rgba(29, 29, 31, 0.6);
+  line-height: 1.3;
   margin-top: 2px;
 }
 
-.apple-card-btn {
+.ba-case-btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  border-radius: 12px;
-  background: rgba(26, 26, 28, 0.88);
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 14px;
+  background: #1d1d1f;
   color: #ffffff;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   transition: all 0.22s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   white-space: nowrap;
 }
 
-.apple-card-btn:hover {
-  background: rgba(26, 26, 28, 1);
+.ba-case-btn:hover {
+  background: #000000;
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
 }
 
-/* Responsividade Apple Cards */
-@media (max-width: 850px) {
-  .services-grid--apple {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    max-width: 440px;
-  }
-}
-
+/* Responsividade Mobile - Conforme a referência anexada pelo usuário */
 @media (max-width: 768px) {
-  .services-section {
+  .before-after-section {
     padding: 55px 0 65px;
   }
 
-  .apple-card {
-    padding: 14px;
-    border-radius: 30px;
+  .ba-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: min(92%, 460px);
   }
 
-  .apple-card-visual {
+  .ba-card {
+    padding: 0;
+    background: transparent;
     border-radius: 24px;
-    padding-top: 20px;
+    box-shadow: none;
+    border: none;
   }
 
-  .apple-card-title {
-    font-size: 1.35rem;
+  .ba-card:hover {
+    transform: none;
+    box-shadow: none;
   }
 
-  .apple-card-img-wrap {
-    height: 280px;
+  /* No mobile, esconde o header separado e usa as pills divididas como na foto anexada */
+  .ba-card-header {
+    display: none;
   }
 
-  .apple-card-footer {
-    padding: 12px 6px 2px;
+  .ba-visual {
+    height: clamp(210px, 56vw, 270px);
+    border-radius: 24px;
+    box-shadow: 0 12px 32px -6px rgba(0, 0, 0, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  /* Exibe pills flutuantes na posição exata da referência */
+  .ba-pill {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Na foto anexada: 'Antes' fica na direita */
+  .ba-pill--antes {
+    right: 18px;
+  }
+
+  /* Na foto anexada: 'Depois' fica na esquerda */
+  .ba-pill--depois {
+    left: 18px;
+  }
+
+  .ba-case-footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 18px 20px;
+    gap: 16px;
+    border-radius: 20px;
+    width: min(92%, 460px);
+  }
+
+  .ba-case-doctor-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ba-case-text {
+    align-items: center;
+  }
+
+  .ba-case-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
   }
 }
 
 @media (max-width: 420px) {
-  .apple-card {
-    padding: 12px;
-    border-radius: 26px;
-  }
-
-  .apple-card-visual {
+  .ba-visual {
+    height: 195px;
     border-radius: 20px;
-    padding-top: 18px;
   }
 
-  .apple-card-title {
-    font-size: 1.25rem;
+  .ba-pill {
+    font-size: 0.8rem;
+    padding: 7px 18px;
   }
 
-  .apple-card-status {
-    font-size: 0.72rem;
+  .ba-pill--antes {
+    right: 14px;
   }
 
-  .apple-card-img-wrap {
-    height: 240px;
-  }
-
-  .apple-card-btn {
-    padding: 9px 16px;
-    font-size: 0.78rem;
+  .ba-pill--depois {
+    left: 14px;
   }
 }
 
@@ -893,7 +961,7 @@ body {
   position: relative;
   width: 100%;
   padding: clamp(55px, 9vh, 92px) 0 clamp(65px, 10vh, 105px);
-  background: linear-gradient(to bottom, #ececf1 0%, #e2e2e7 90%, #dedee3 100%);
+  background: linear-gradient(180deg, #e2e2e7 0%, #d8d8de 100%);
   overflow: hidden;
 }
 
@@ -922,8 +990,8 @@ body {
   display: block;
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1rem, 1.45vw, 1.3rem);
-  font-weight: 400;
-  color: rgba(46, 46, 48, 0.8);
+  font-weight: 500;
+  color: rgba(29, 29, 31, 0.55);
   letter-spacing: 0.03em;
   margin-bottom: 2px;
 }
@@ -931,8 +999,8 @@ body {
 .why-main-title {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.9rem, 3.6vw, 3.4rem);
-  font-weight: 500;
-  color: rgba(26, 26, 28, 0.8);
+  font-weight: 700;
+  color: #1d1d1f;
   letter-spacing: 0.01em;
   line-height: 1;
 }
@@ -953,23 +1021,16 @@ body {
   gap: clamp(14px, 1.8vw, 22px);
 }
 
-/* Círculo numerado */
-.why-number-badge {
+/* Número limpo sem bolinha */
+.why-number {
   flex: 0 0 auto;
-  width: clamp(44px, 5.5vw, 58px);
-  height: clamp(44px, 5.5vw, 58px);
-  background-color: rgba(45, 45, 47, 0.8);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1.05rem, 1.5vw, 1.4rem);
-  font-weight: 700;
-  color: rgba(26, 26, 28, 0.88);
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
+  font-weight: 800;
+  color: #1d1d1f;
   letter-spacing: 0.02em;
+  min-width: 36px;
   margin-top: 2px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
 }
 
 .why-item-text {
@@ -980,7 +1041,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(0.95rem, 1.15vw, 1.1rem);
   font-weight: 700;
-  color: rgba(26, 26, 28, 0.8);
+  color: #1d1d1f;
   letter-spacing: 0.01em;
   margin-bottom: 5px;
   line-height: 1.3;
@@ -990,7 +1051,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(0.78rem, 0.95vw, 0.9rem);
   font-weight: 400;
-  color: rgba(58, 58, 60, 0.8);
+  color: rgba(29, 29, 31, 0.72);
   line-height: 1.6;
   letter-spacing: 0.01em;
 }
@@ -1067,10 +1128,8 @@ body {
     align-items: flex-start;
   }
 
-  .why-number-badge {
-    width: 44px;
-    height: 44px;
-    font-size: 1.05rem;
+  .why-number {
+    font-size: 1.4rem;
     flex-shrink: 0;
   }
 
@@ -1098,7 +1157,7 @@ body {
   position: relative;
   width: 100%;
   padding: clamp(55px, 9vh, 90px) 0 clamp(65px, 10vh, 100px);
-  background: #f5f5f7;
+  background: linear-gradient(180deg, #d8d8de 0%, #ceced5 100%);
   overflow: hidden;
 }
 
@@ -1113,8 +1172,8 @@ body {
   display: block;
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1rem, 1.4vw, 1.2rem);
-  font-weight: 300;
-  color: rgba(26, 26, 28, 0.6);
+  font-weight: 500;
+  color: rgba(29, 29, 31, 0.55);
   letter-spacing: 0.05em;
   margin-bottom: 2px;
 }
@@ -1122,8 +1181,8 @@ body {
 .space-main-title {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(2.6rem, 5vw, 4.2rem);
-  font-weight: 700;
-  color: rgba(26, 26, 28, 0.88);
+  font-weight: 800;
+  color: #1d1d1f;
   letter-spacing: 0.02em;
   line-height: 1;
   margin-bottom: clamp(14px, 2.2vh, 22px);
@@ -1132,8 +1191,8 @@ body {
 .space-description {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(0.9rem, 1.1vw, 1.04rem);
-  font-weight: 300;
-  color: rgba(33, 33, 35, 0.75);
+  font-weight: 400;
+  color: rgba(29, 29, 31, 0.72);
   line-height: 1.65;
   letter-spacing: 0.02em;
   max-width: 560px;
@@ -1189,15 +1248,15 @@ body {
 }
 
 .space-photo--gray {
-  background-color: #dcdce2;
+  background-color: #b5b5bc;
 }
 
 .space-photo--dark {
-  background-color: #bfbfc6;
+  background-color: #323134;
 }
 
 .space-photo--light {
-  background-color: #d0d0d6;
+  background-color: #dedee4;
 }
 
 .space-photo:hover .space-photo-inner {
@@ -1275,7 +1334,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #ececf1;
+  background-color: #434343;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -1890,14 +1949,13 @@ html.lenis, html.lenis body {
   color: rgba(20, 20, 22, 0.95);
 }
 
-/* Interação no número badge da Seção Por que escolher */
-.why-number-badge {
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+/* Interação no número da Seção Por que escolher */
+.why-number {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.why-item:hover .why-number-badge {
+.why-item:hover .why-number {
   transform: scale(1.08);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
 }
 
 /* Hover suave nas fotos do Espaço */
@@ -1923,5 +1981,209 @@ html.lenis, html.lenis body {
   .hero-quote,
   .hero-cta {
     animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER) - PRETO 80% OPACIDADE
+   ========================================================================== */
+.site-footer {
+  position: relative;
+  width: 100%;
+  background-color: rgba(26, 26, 28, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #ffffff;
+  padding: clamp(50px, 8vh, 75px) 0 35px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-container {
+  width: min(88%, 1160px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(35px, 5vh, 50px);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  max-width: 380px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 14px;
+}
+
+.footer-logo-icon {
+  width: 28px;
+  height: 31px;
+}
+
+.footer-brand-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  color: #ffffff;
+}
+
+.footer-brand-light {
+  font-weight: 300;
+  letter-spacing: 0.16em;
+  opacity: 0.85;
+}
+
+.footer-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+.footer-nav {
+  display: flex;
+  gap: clamp(36px, 6vw, 70px);
+  flex-wrap: wrap;
+}
+
+.footer-col-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0 0 16px 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social-link:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.footer-social-svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.footer-whatsapp-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.footer-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: default;
+  transition: all 0.2s ease;
+}
+
+.footer-soon-badge {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-copy {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+}
+
+.footer-back-top {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-back-top:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
   }
 }

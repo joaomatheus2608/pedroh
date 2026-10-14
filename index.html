@@ -27,14 +27,17 @@
         <a href="#hero" class="nav-logo" aria-label="Logo Pedro Henrique">
           <svg class="logo-icon" viewBox="0 0 42 46" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Haste vertical do P -->
-            <line x1="2.5" y1="2" x2="2.5" y2="35" stroke="rgba(26, 26, 28, 0.8)" stroke-width="2.8" stroke-linecap="square" />
+            <line x1="2.5" y1="2" x2="2.5" y2="35" stroke="rgba(26, 26, 28, 0.8)" stroke-width="2.8"
+              stroke-linecap="square" />
             <!-- Curvatura do P -->
-            <path d="M2.5 3.3 H20 C26 3.3 29 6 29 11.5 C29 17 26 19.7 20 19.7 H2.5" stroke="rgba(26, 26, 28, 0.8)" stroke-width="2.8"
-              stroke-linecap="square" fill="none" />
+            <path d="M2.5 3.3 H20 C26 3.3 29 6 29 11.5 C29 17 26 19.7 20 19.7 H2.5" stroke="rgba(26, 26, 28, 0.8)"
+              stroke-width="2.8" stroke-linecap="square" fill="none" />
             <!-- Perna esquerda do H -->
-            <line x1="12" y1="11.5" x2="12" y2="44" stroke="rgba(26, 26, 28, 0.8)" stroke-width="2.8" stroke-linecap="square" />
+            <line x1="12" y1="11.5" x2="12" y2="44" stroke="rgba(26, 26, 28, 0.8)" stroke-width="2.8"
+              stroke-linecap="square" />
             <!-- Perna direita do H -->
-            <line x1="39.5" y1="11.5" x2="39.5" y2="44" stroke="rgba(26, 26, 28, 0.8)" stroke-width="2.8" stroke-linecap="square" />
+            <line x1="39.5" y1="11.5" x2="39.5" y2="44" stroke="rgba(26, 26, 28, 0.8)" stroke-width="2.8"
+              stroke-linecap="square" />
             <!-- Barra horizontal do H -->
             <line x1="12" y1="28" x2="39.5" y2="28" stroke="rgba(26, 26, 28, 0.8)" stroke-width="2.8" />
           </svg>
@@ -115,85 +118,68 @@
     </div>
   </section>
 
-  <!-- SEÇÃO 3: SERVIÇOS -->
-  <section class="services-section" id="servicos">
+  <!-- SEÇÃO 3: PROVA SOCIAL (ANTES & DEPOIS) -->
+  <section class="before-after-section" id="antes-e-depois">
 
     <!-- Cabeçalho da Seção -->
-    <div class="services-header" data-reveal="fade-up">
-      <span class="services-subtitle-top">Conheça nossos</span>
-      <h2 class="services-main-title">serviços</h2>
-      <p class="services-description">
-        Tratamentos de alta precisão dedicados a transformar o seu sorriso com naturalidade, harmonia e a durabilidade que você merece.
+    <div class="ba-header" data-reveal="fade-up">
+      <span class="ba-subtitle-top">Prova Social</span>
+      <h2 class="ba-main-title">Antes & Depois</h2>
+      <p class="ba-description">
+        Resultados reais e transformações de casos clínicos realizados pelo Dr. Pedro Henrique. Precisão, anatomia natural e excelência em cada detalhe.
       </p>
     </div>
 
-    <!-- Grade de Serviços Apple Style -->
-    <div class="services-grid services-grid--apple">
+    <!-- Grade / Container Antes e Depois -->
+    <div class="ba-container">
 
-      <!-- Card 1: Facetas em Resina -->
-      <article class="apple-card" data-reveal="card">
-        <div class="apple-card-visual">
-          <div class="apple-card-head">
-            <h3 class="apple-card-title">Facetas em Resina</h3>
-            <div class="apple-card-status">
-              <span class="apple-status-icon" aria-hidden="true">✦</span>
-              <span>Escultura Direta & Agilidade</span>
-            </div>
-          </div>
-          <div class="apple-card-img-wrap">
-            <img src="faceta-resina.jpg" alt="Facetas em Resina - Sorriso Natural" class="apple-card-img" />
-          </div>
+      <!-- Card Antes -->
+      <article class="ba-card ba-card--antes" data-reveal="card">
+        <!-- Título em cima para visualização no Desktop -->
+        <div class="ba-card-header">
+          <span class="ba-tag ba-tag--antes">Antes</span>
+          <h3 class="ba-card-title">Caso Inicial</h3>
         </div>
 
-        <div class="apple-card-footer">
-          <div class="apple-card-profile">
-            <div class="apple-avatar-wrap">
-              <img src="pedro-cutout.png" alt="Dr. Pedro Henrique" class="apple-avatar-img" />
-              <span class="apple-verified-dot" title="Profissional Verificado"></span>
-            </div>
-            <div class="apple-profile-info">
-              <span class="apple-profile-handle">@drpedrohenrique</span>
-              <span class="apple-profile-tag">Transformação Imediata</span>
-            </div>
-          </div>
-          <a href="#agendar" class="apple-card-btn">
-            <span>+ Agendar</span>
-          </a>
+        <div class="ba-visual">
+          <img src="antes.jpg" alt="Antes do procedimento odontológico - Dr. Pedro Henrique" class="ba-img ba-img--antes" />
+          <!-- Pill flutuante para mobile (estilo referência) -->
+          <span class="ba-pill ba-pill--antes">Antes</span>
         </div>
       </article>
 
-      <!-- Card 2: Facetas em Porcelana -->
-      <article class="apple-card" data-reveal="card">
-        <div class="apple-card-visual">
-          <div class="apple-card-head">
-            <h3 class="apple-card-title">Facetas em Porcelana</h3>
-            <div class="apple-card-status">
-              <span class="apple-status-icon" aria-hidden="true">✦</span>
-              <span>Cerâmica Pura & Alta Durabilidade</span>
-            </div>
-          </div>
-          <div class="apple-card-img-wrap">
-            <img src="faceta-porcelana.jpg" alt="Facetas em Porcelana - Brilho Permanente" class="apple-card-img" />
-          </div>
+      <!-- Card Depois -->
+      <article class="ba-card ba-card--depois" data-reveal="card">
+        <!-- Título em cima para visualização no Desktop -->
+        <div class="ba-card-header">
+          <span class="ba-tag ba-tag--depois">Depois</span>
+          <h3 class="ba-card-title">Resultado Final</h3>
         </div>
 
-        <div class="apple-card-footer">
-          <div class="apple-card-profile">
-            <div class="apple-avatar-wrap">
-              <img src="pedro-cutout.png" alt="Dr. Pedro Henrique" class="apple-avatar-img" />
-              <span class="apple-verified-dot" title="Profissional Verificado"></span>
-            </div>
-            <div class="apple-profile-info">
-              <span class="apple-profile-handle">@drpedrohenrique</span>
-              <span class="apple-profile-tag">Máxima Longevidade</span>
-            </div>
-          </div>
-          <a href="#agendar" class="apple-card-btn">
-            <span>+ Agendar</span>
-          </a>
+        <div class="ba-visual">
+          <img src="depois.jpg" alt="Depois do procedimento odontológico - Dr. Pedro Henrique" class="ba-img ba-img--depois" />
+          <!-- Pill flutuante para mobile (estilo referência) -->
+          <span class="ba-pill ba-pill--depois">Depois</span>
         </div>
       </article>
 
+    </div>
+
+    <!-- Barra de Informações do Caso Clínico (Estilo Apple) -->
+    <div class="ba-case-footer" data-reveal="fade-up">
+      <div class="ba-case-doctor-info">
+        <div class="ba-case-avatar-wrap">
+          <img src="pedro-cutout.png" alt="Dr. Pedro Henrique" class="ba-case-avatar" />
+          <span class="ba-case-verified" title="Profissional Verificado"></span>
+        </div>
+        <div class="ba-case-text">
+          <span class="ba-case-handle">@pedrohdoctor</span>
+          <span class="ba-case-proc">Restauração Estética & Reabilitação Anatômica</span>
+        </div>
+      </div>
+      <a href="#agendar" class="ba-case-btn">
+        <span>+ Agendar Avaliação</span>
+      </a>
     </div>
 
   </section>
@@ -213,7 +199,7 @@
         <ol class="why-list">
 
           <li class="why-item" data-reveal="stagger-item">
-            <div class="why-number-badge">1.</div>
+            <div class="why-number">1.</div>
             <div class="why-item-text">
               <h3 class="why-item-title">O Seu Sorriso Merece o Melhor</h3>
               <p class="why-item-desc">Aqui você encontra um atendimento de qualidade, um ambiente acolhedor e,
@@ -222,7 +208,7 @@
           </li>
 
           <li class="why-item" data-reveal="stagger-item">
-            <div class="why-number-badge">2.</div>
+            <div class="why-number">2.</div>
             <div class="why-item-text">
               <h3 class="why-item-title">Tecnologia, Precisão e Atendimento Personalizado</h3>
               <p class="why-item-desc">Na Innovare, unimos tecnologia e um atendimento acolhedor para oferecer a melhor
@@ -231,7 +217,7 @@
           </li>
 
           <li class="why-item" data-reveal="stagger-item">
-            <div class="why-number-badge">3.</div>
+            <div class="why-number">3.</div>
             <div class="why-item-text">
               <h3 class="why-item-title">A Transformação Que Você Merece</h3>
               <p class="why-item-desc">Aqui você encontra um atendimento de qualidade, um ambiente acolhedor e,
@@ -400,6 +386,85 @@
 
   </section>
 
+  <!-- FOOTER / RODAPÉ -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo" aria-label="Logo Pedro Henrique">
+            <svg class="logo-icon footer-logo-icon" viewBox="0 0 42 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="2.5" y1="2" x2="2.5" y2="35" stroke="rgba(255, 255, 255, 0.85)" stroke-width="2.8"
+                stroke-linecap="square" />
+              <path d="M2.5 3.3 H20 C26 3.3 29 6 29 11.5 C29 17 26 19.7 20 19.7 H2.5" stroke="rgba(255, 255, 255, 0.85)"
+                stroke-width="2.8" stroke-linecap="square" fill="none" />
+              <line x1="12" y1="11.5" x2="12" y2="44" stroke="rgba(255, 255, 255, 0.85)" stroke-width="2.8"
+                stroke-linecap="square" />
+              <line x1="39.5" y1="11.5" x2="39.5" y2="44" stroke="rgba(255, 255, 255, 0.85)" stroke-width="2.8"
+                stroke-linecap="square" />
+              <line x1="12" y1="28" x2="39.5" y2="28" stroke="rgba(255, 255, 255, 0.85)" stroke-width="2.8" />
+            </svg>
+            <span class="footer-brand-name">PEDROH<span class="footer-brand-light">DOCTOR</span></span>
+          </a>
+          <p class="footer-tagline">
+            Excelência e sensibilidade em odontologia estética. Cuidando da saúde e da beleza natural do seu sorriso.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <div class="footer-col">
+            <h4 class="footer-col-title">Redes Sociais</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="https://instagram.com/pedrohdoctor" target="_blank" rel="noopener noreferrer"
+                  class="footer-social-link">
+                  <svg class="footer-social-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span>@pedrohdoctor</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/clinicapedroh" target="_blank" rel="noopener noreferrer"
+                  class="footer-social-link">
+                  <svg class="footer-social-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span>@clinicapedroh</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Atendimento</h4>
+            <div class="footer-whatsapp-box">
+              <a href="javascript:void(0)" class="footer-whatsapp-btn" title="Em breve">
+                <svg class="footer-social-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                  </path>
+                </svg>
+                <span>WhatsApp Consultório</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Dr. Pedro Henrique. Todos os direitos reservados.</p>
+        <a href="#hero" class="footer-back-top">Voltar ao topo &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
   <!-- Lenis Smooth Inertia Scroll (Local) -->
   <script src="lenis.min.js"></script>
 
@@ -460,7 +525,7 @@
     }, { passive: true });
 
     // Configura índices de stagger dinamicamente para cada grupo
-    document.querySelectorAll('.services-grid .apple-card, .services-grid .service-card').forEach((card, index) => {
+    document.querySelectorAll('.ba-container .ba-card, .services-grid .apple-card, .services-grid .service-card').forEach((card, index) => {
       card.style.setProperty('--stagger-index', index);
     });
     document.querySelectorAll('.why-list .why-item').forEach((item, index) => {
@@ -542,7 +607,7 @@
               // Se o navegador bloqueou áudio em autoplay não interagido, inicia mudo e reativa no scroll
               if (err.name === 'NotAllowedError') {
                 whyVideo.muted = true;
-                whyVideo.play().catch(() => {});
+                whyVideo.play().catch(() => { });
               }
             });
           }
@@ -557,7 +622,7 @@
             if (!shouldBePlaying && !whyVideo.paused) {
               whyVideo.pause();
             }
-          }).catch(() => {});
+          }).catch(() => { });
         } else {
           if (!whyVideo.paused) {
             whyVideo.pause();
